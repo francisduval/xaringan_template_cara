@@ -1,0 +1,249 @@
+---
+title: "Tarification avec données télématiques"
+subtitle: "Actuarial Research Conference"
+author: "Francis Duval"
+institute: "Université du Québec à Montréal"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: "theme_cara.css"
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r include = FALSE}
+library(tidyverse)
+library(xaringan)
+library(xaringanthemer)
+library(kableExtra)
+library(DT)
+```
+
+class: title-slide
+background-image: url(images/logo_chaire.jpg), url(images/background.jpg)
+background-size: 30%, cover
+background-position: 98% 98%, center
+
+.titre-page-titre[Tarification avec données télématiques]
+<br />
+.sous-titre-page-titre[Actuarial Research Conference]
+<br />
+<br />
+<br />
+<br />
+<br />
+.sous-sous-titre-page-titre[.mon-style-bleu[par] Francis Duval <br /> .mon-style-bleu[à] l'Université du Québec à Montréal <br /> .mon-style-bleu[le] 14 février 2023]
+
+---
+
+# Titre
+## Sous-titre
+### Sous-sous-titre
+
+- Types de texte
+  - **En gras**
+  - *En italique*
+- Un lien
+  - [https://github.com/yihui/xaringan](https://github.com/yihui/xaringan)
+
+---
+
+# Code R et montrer la sortie
+
+```{r, warning = F, fig.dim = c(10, 5), fig.align = "center", fig.showtext = T}
+ggplot(mpg) +
+    aes(cty, hwy) +
+    geom_point() +
+    ggtitle("Fuel efficiency!") +
+    theme_xaringan()
+```
+
+---
+
+# Tables à partir d'un dataframe
+
+```{r}
+knitr::kable(head(iris), format = "html", table.attr = "style='width:95%;'")
+```
+
+- Si on veut juste la table sans le code, on peut changer les options du code chunk.
+
+---
+
+# Table interactive
+
+```{r}
+DT::datatable(mpg, fillContainer = F, options = list(pageLength = 6))
+```
+
+
+---
+
+# Mode présentation avec notes
+
+Il est possible d'écrire des notes qui ne seront pas visibles par les spectateurs. Il suffit de faire 3 points d'interrogations (???) et d'écrire vos notes en-dessous. Pour les voir, appuyer sur « p » dans le Viewer.
+
+```
+---
+
+Contenu de la slide
+
+???
+
+Écrire vos notes ici.
+
+---
+```
+
+Si vous êtes dans RStudio, vous pouvez essayer de taper la lettre « p » dans le viewer (en utilisant le Infinite Moon Reader). Vous allez ainsi voir les notes.
+
+???
+
+Écrire vos notes ici.
+
+---
+
+# Surligner du code R
+
+```{r}
+x <- rnorm(100)
+{{x_scale <- x / sd(x)}}
+```
+
+---
+
+background-image: url("images/snorlax.jpeg")
+background-position: 80% 50%
+background-size: 40%
+
+# Séparer la diapositive en panneaux 
+
+.pull-left[
+## Par exemple, texte à gauche et image à droite
+Si vous mettez votre texte dans `.pull-left[]`, il ne devrait pas dépasser dans la partie de droite.
+]
+
+---
+
+# Texte personnalisé
+
+On peut se définir du texte personnalisé. Par exemple, on peut ajouter ceci au fichier `.css` pour écrire du texte rouge, gras, italique et géant:
+
+```
+.rouge-italique-gras-geant {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 5em;
+  color: red;
+}
+```
+
+On utilise ensuite `.rouge-italique-gras-geant[votre texte]` dans le fichier .Rmd. Par exemple, .rouge-italique-gras-geant[ce texte est rouge-italique-gras-géant]
+
+---
+
+# Équations
+
+Pour écrire une équation, on procède comme en LaTeX:
+
+```
+\begin{align*}
+  x &= x\\
+  &= y + z\\
+  &= x + y + z
+\end{align*}
+```
+
+\begin{align*}
+  x &= x\\
+  &= y + z\\
+  &= x + y + z
+\end{align*}
+
+---
+
+class: inverse
+
+# Slide avec couleurs inverses
+
+Il faudrait changer les couleurs inverses dans le fichier `.css` pour que ça soit beau, mais personnellement, je ne compte pas utiliser les slides inverses.
+
+---
+
+# Carte interactive
+
+```{r, fig.dim = c(10, 6)}
+library(leaflet)
+leaflet() %>% addTiles() %>% setView(-73.52, 45.63, zoom = 10)
+```
+
+---
+
+# Insérer une image
+
+```{r, out.width = "40%", fig.cap = "Un Snorlax"}
+knitr::include_graphics("images/snorlax.jpeg")
+```
+
+---
+
+# Layout à 2 colonnes
+
+.pull-left[
+- Marley was dead, to begin with. There is no doubt whatever about that. The register of his burial was signed by the clergyman, the clerk, the undertaker, and the chief mourner. Scrooge signed it. And Scrooge's name was good upon 'Change for anything he chose to put his hand to.
+- Scrooge knew he was dead? Of course he did. How could it be otherwise? Scrooge and he were partners for I don't know how many years. Scrooge was his sole executor, his sole administrator, his sole assign, his sole residuary legatee, his sole friend, his sole mourner.
+]
+.pull-right[
+![](https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg)
+]
+
+---
+
+# Slide incrémentale
+
+
+- Simplement
+--
+
+- séparer
+--
+
+- avec
+--
+
+- des
+--
+
+- doubles
+--
+
+- tirets
+--
+
+<br />
+<br />
+C'est-à-dire avec `--`.
+
+---
+
+# Séparer 25/75
+
+J'ai créé des classes dans le fichier .css (.pull-right-75 et .pull-left-25) qui permettent de faire ce layout 25/75. On peut également utiliser `.left-column[]` et `.right-column[]`.
+
+.pull-left-25[
+Scrooge knew he was dead? Of course he did. How could it be otherwise? Scrooge and he were partners for I don't know how many years. Scrooge was his sole executor, his sole administrator, his sole assign, his sole residuary legatee, his sole friend, his sole mourner.]
+
+.pull-right-75[
+Scrooge knew he was dead? Of course he did. How could it be otherwise? Scrooge and he were partners for I don't know how many years. Scrooge was his sole executor, his sole administrator, his sole assign, his sole residuary legatee, his sole friend, his sole mourner.
+
+<br />
+```{r, echo = F, out.width = "50%", fig.align = "center"}
+knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg")
+```
+
+]
