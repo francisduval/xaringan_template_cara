@@ -16,14 +16,6 @@ output:
       countIncrementalSlides: false
 ---
 
-```{r include = FALSE}
-library(tidyverse)
-library(xaringan)
-library(xaringanthemer)
-library(kableExtra)
-library(DT)
-```
-
 class: title-slide
 background-image: url(images/logo_chaire.jpg), url(images/background.jpg)
 background-size: 30%, cover
