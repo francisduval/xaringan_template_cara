@@ -34,7 +34,7 @@ background-position: 98% 98%, center
 .sous-titre-page-titre[Sous-titre au choix]
 <br />
 <br />
-<br />
+***
 <br />
 <br />
 .sous-sous-titre-page-titre[.mon-style-bleu[par] Francis Duval <br /> .mon-style-bleu[à] l'Université du Québec à Montréal <br /> .mon-style-bleu[le] 16 février 2023]
