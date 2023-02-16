@@ -6,6 +6,7 @@ institute: "Université du Québec à Montréal"
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
+    self_contained: true
     seal: false
     css: "theme_cara.css"
     lib_dir: libs
