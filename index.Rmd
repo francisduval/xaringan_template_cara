@@ -100,7 +100,7 @@ Contenu de la slide
 ---
 ```
 
-Si vous êtes dans RStudio, vous pouvez essayer de taper la lettre « p » dans le viewer (en utilisant le Infinite Moon Reader). Vous allez ainsi voir les notes.
+Pour voir les notes, simplement taper la lettre « p ».
 
 ???
 
