@@ -6,7 +6,6 @@ institute: "Université du Québec à Montréal"
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    self_contained: true
     seal: false
     css: "theme_cara.css"
     lib_dir: libs
@@ -30,15 +29,15 @@ background-image: url(images/logo_chaire.jpg), url(images/background.jpg)
 background-size: 30%, cover
 background-position: 98% 98%, center
 
-.titre-page-titre[Tarification avec données télématiques]
+.titre-page-titre[Coquille xaringan pour la Chaire Co-operators en analyse des risques actuariels]
 <br />
-.sous-titre-page-titre[Actuarial Research Conference]
-<br />
-<br />
+.sous-titre-page-titre[Sous-titre au choix]
 <br />
 <br />
 <br />
-.sous-sous-titre-page-titre[.mon-style-bleu[par] Francis Duval <br /> .mon-style-bleu[à] l'Université du Québec à Montréal <br /> .mon-style-bleu[le] 14 février 2023]
+<br />
+<br />
+.sous-sous-titre-page-titre[.mon-style-bleu[par] Francis Duval <br /> .mon-style-bleu[à] l'Université du Québec à Montréal <br /> .mon-style-bleu[le] 16 février 2023]
 
 ---
 
