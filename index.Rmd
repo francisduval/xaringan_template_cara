@@ -1,6 +1,6 @@
 ---
 title: "Tarification avec données télématiques"
-subtitle: "Actuarial Research Conference"
+subtitle: "Nom de la conférence"
 author: "Francis Duval"
 institute: "Université du Québec à Montréal"
 date: "`r Sys.Date()`"
